@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hnu.highlynewapp.transformation.mapper.EvaluationCaseMapper">
+    <select id="findOneByEvalCaseId" parameterType="Long" resultMap="ExpertAndTechAchWithEvalCaseResult">
+        SELECT ec.*, e.`expert_id`, e.`name`, e.`image`, e.`gender`, e.`degree`, e.`profession`, e.`title`, e.`company`, ta.`technology_achievement_id` AS tech_ach_id, ta.`title`, ta.`category`
+        FROM evaluation_case AS ec
+        INNER JOIN expert AS e
+        ON ec.`expert_id` = e.`expert_id`
+        INNER JOIN technology_achievement AS ta
+        ON ec.`technology_achievement_id` = ta.`technology_achievement_id`
+        WHERE ec.`evaluation_case_id` = #{evaluationCaseId}
+        LIMIT 1
+    </select>
+    <resultMap id="ExpertAndTechAchWithEvalCaseResult"
+               type="com.hnu.highlynewapp.transformation.vo.FindEvaluationCaseVo">
+        <id property="evaluationCaseId" column="evaluation_case_id"/>
+        <result property="title" column="title"/>
+        <result property="completeTime" column="completeTime"/>
+        <result property="result" column="result"/>
+        <result property="mode" column="mode"/>
+        <result property="system" column="system"/>
+        <association property="expert" javaType="com.hnu.highlynewapp.transformation.pojo.Expert">
+            <id property="expertId" column="expert_id"/>
+            <result property="name" column="name"/>
+            <result property="degree" column="degree"/>
+            <result property="profession" column="profession"/>
+            <result property="title" column="title"/>
+            <result property="company" column="company"/>
+        </association>
+        <association property="technologyAchievementEntity"
+                     javaType="com.hnu.highlynewapp.entity.TechnologyAchievementEntity">
+            <id property="technologyAchievementId" column="tech_ach_id"/>
+            <result property="title" column="title"/>
+            <result property="category" column="category"/>
+        </association>
+    </resultMap>
+</mapper>

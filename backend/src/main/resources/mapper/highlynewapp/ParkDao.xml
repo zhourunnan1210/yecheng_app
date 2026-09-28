@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hnu.highlynewapp.dao.ParkDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.hnu.highlynewapp.entity.ParkEntity" id="parkMap">
+        <result property="parkId" column="park_id"/>
+        <result property="parkName" column="park_name"/>
+        <result property="parkImageUrl" column="park_image_url"/>
+        <result property="parkPhone" column="park_phone"/>
+        <result property="parkWebsite" column="park_website"/>
+        <result property="parkIntroduction" column="park_introduction"/>
+        <result property="avatar" column="avatar"/>
+        <result property="parkSupporting" column="park_supporting"/>
+        <result property="favouredPolicy" column="favoured_policy"/>
+        <result property="productPositioning" column="product_positioning"/>
+        <result property="keyPoints" column="key_points"/>
+    </resultMap>
+</mapper>

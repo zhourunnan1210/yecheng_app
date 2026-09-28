@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hnu.highlynewapp.transformation.mapper.EvaluationCaseVoMapper">
+    <!-- 嵌套结果：使用嵌套结果映射来处理重复的联合结果的子集 -->
+    <select id="findAllPages" resultMap="ExpertAndTechAchWithEvalCaseResult">
+        SELECT ec.`evaluation_case_id`, ec.`title`, ec.`complete_time`, e.`expert_id`, e.`name`, e.`degree`, e.`title`, e.`company`, ta.`technology_achievement_id` AS tech_ach_id, ta.`title`, ta.`category`
+        FROM evaluation_case AS ec
+        INNER JOIN expert AS e
+        ON ec.`expert_id` = e.`expert_id`
+        INNER JOIN technology_achievement AS ta
+        ON ec.`technology_achievement_id` = ta.`technology_achievement_id`
+    </select>
+    <resultMap id="ExpertAndTechAchWithEvalCaseResult"
+               type="com.hnu.highlynewapp.transformation.vo.FindEvaluationCaseVo">
+        <id property="evaluationCaseId" column="evaluation_case_id"/>
+        <result property="title" column="title"/>
+        <result property="completeTime" column="completeTime"/>
+        <association property="expert" javaType="com.hnu.highlynewapp.transformation.pojo.Expert">
+            <id property="expertId" column="expert_id"/>
+            <result property="name" column="name"/>
+            <result property="degree" column="degree"/>
+            <result property="title" column="title"/>
+            <result property="company" column="company"/>
+        </association>
+        <association property="technologyAchievementEntity"
+                     javaType="com.hnu.highlynewapp.entity.TechnologyAchievementEntity">
+            <id property="technologyAchievementId" column="tech_ach_id"/>
+            <result property="title" column="title"/>
+            <result property="category" column="category"/>
+        </association>
+    </resultMap>
+</mapper>

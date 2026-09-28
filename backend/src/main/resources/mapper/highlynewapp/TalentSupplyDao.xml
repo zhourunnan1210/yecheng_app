@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hnu.highlynewapp.dao.TalentSupplyDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.hnu.highlynewapp.entity.TalentSupplyEntity" id="talentSupplyMap">
+        <result property="talentSupplyId" column="talent_supply_id"/>
+        <result property="name" column="name"/>
+        <result property="image" column="image"/>
+        <result property="age" column="age"/>
+        <result property="profession" column="profession"/>
+        <result property="gender" column="gender"/>
+        <result property="job" column="job"/>
+        <result property="contactId" column="contact_id"/>
+        <result property="skill" column="skill"/>
+        <result property="experience" column="experience"/>
+        <result property="degree" column="degree"/>
+        <result property="enterDate" column="enter_date"/>
+        <result property="graduateDate" column="graduate_date"/>
+        <result property="school" column="school"/>
+        <result property="resumeUrl" column="resume_url"/>
+        <result property="publishTime" column="publish_time"/>
+    </resultMap>
+
+
+</mapper>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hnu.highlynewapp.dao.FinancialProductDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.hnu.highlynewapp.entity.FinancialProductEntity" id="financialProductMap">
+        <result property="financialProductId" column="financial_product_id"/>
+        <result property="title" column="title"/>
+        <result property="publishTime" column="publish_time"/>
+        <result property="description" column="description"/>
+        <result property="image" column="image"/>
+        <result property="rate" column="rate"/>
+        <result property="loanMoney" column="loan_money"/>
+        <result property="ensureMethod" column="ensure_method"/>
+        <result property="loanDeadline" column="loan_deadline"/>
+        <result property="applyCondition" column="apply_condition"/>
+        <result property="contactId" column="contact_id"/>
+        <result property="financialInstitutionId" column="financial_institution_id"/>
+    </resultMap>
+
+
+</mapper>

@@ -1,0 +1,989 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+
+
+
+
+
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "海南高企服务咨询平台"
+
+			}
+		},
+		{
+			"path": "pages/user/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/auth/index1/index",
+			"style": {
+				"navigationBarTitleText": "认证类型"
+			}
+		}, {
+			"path": "pages/auth/company/company",
+			"style": {
+				"navigationBarTitleText": "企业认证",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/auth/finance/finance",
+			"style": {
+				"navigationBarTitleText": "投资认证",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/auth/technology/technology",
+			"style": {
+				"navigationBarTitleText": "科技主管部门",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/auth/colleges/colleges",
+			"style": {
+				"navigationBarTitleText": "高校认证"
+			}
+
+		}, {
+			"path": "pages/auth/service/service",
+			"style": {
+				"navigationBarTitleText": "服务机构认证",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/policy/policy",
+			"style": {
+				"navigationBarTitleText": "政策服务"
+
+			}
+
+		}, {
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
+
+		}, {
+			"path": "pages/park/park",
+			"style": {
+				"navigationBarTitleText": "科技园区",
+				"enablePullDownRefresh": false
+			}
+
+		 }, 
+		 // {
+		// 	"path": "pages/add/add",
+		// 	"style": {
+		// 		"navigationBarTitleText": "发布",
+		// 		"enablePullDownRefresh": false
+		// 	}
+
+		// }, 
+		{
+			"path": "pages/add/people/people",
+			"style": {
+				"navigationBarTitleText": "人才需求发布",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/add/technologyNeed/technologyNeed",
+			"style": {
+				"navigationBarTitleText": "技术需求",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/add/financing/financing",
+			"style": {
+				"navigationBarTitleText": "投融资意向",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/add/achievement/achievement",
+			"style": {
+				"navigationBarTitleText": "发布科技成果",
+				"enablePullDownRefresh": false
+			}
+
+		}
+
+		, {
+			"path": "pages/add/givePeople/givePeople",
+			"style": {
+				"navigationBarTitleText": "发布人才信息",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/policy/policydesc/policydesc",
+			"style": {
+				"navigationBarTitleText": "政策详情",
+				"enablePullDownRefresh": false
+			}
+
+		}
+
+		, {
+			"path": "pages/policy/policyAnalyseDesc/policyAnalyseDesc",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/detail/people/people",
+			"style": {
+				"navigationBarTitleText": "人才服务",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/detail/technology/technology",
+			"style": {
+				"navigationBarTitleText": "成果服务",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/detail/financing/financing",
+			"style": {
+				"navigationBarTitleText": "科技金融",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/detail/school/school",
+			"style": {
+				"navigationBarTitleText": "高校院所",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/detail/service/service",
+			"style": {
+				"navigationBarTitleText": "科技项目",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/user/register/register",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/detail/financing/financingInst/financingInst",
+			"style": {
+				"navigationBarTitleText": "投资详情",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/detail/financing/financingPro/financingPro",
+			"style": {
+				"navigationBarTitleText": "产品详情",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/detail/financing/financingNeed/financingNeed",
+			"style": {
+				"navigationBarTitleText": "融资详情",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/detail/people/peopleNeed/peopleNeed",
+			"style": {
+				"navigationBarTitleText": "需求详情",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/detail/people/peopleApply/peopleApply",
+			"style": {
+				"navigationBarTitleText": "人才信息",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/detail/technology/technologyAch/technologyAch",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/detail/technology/technologyNeed/technologyNeed",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/detail/technology/schoolDetail/schoolDetail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/detail/service/serviceInst/serviceInst",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/detail/service/servicePro/servicePro",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/add/financingProduct/financingProduct",
+			"style": {
+				"navigationBarTitleText": "发布产品",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/add/fuwuPro/fuwuPro",
+			"style": {
+				"navigationBarTitleText": "服务产品",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/add/latestpolicy/latestpolicy",
+			"style": {
+				"navigationBarTitleText": "发布最新政策",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/add/anaylsepolicy/anaylsepolicy",
+			"style": {
+				"navigationBarTitleText": "发布政策解读",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/mine/setting/setting",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	    ,{
+            "path" : "pages/park/parkDesc/parkDesc",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mine/myPublish/myPublish",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的发布",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mine/depPublish/depPublish",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的发布",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mine/sPublish/sPublish",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的发布",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mine/fPublish/fPublish",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的发布",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mine/serPublish/serPublish",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的发布",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/auth/business/business",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "企业注册",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/question/question",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "问题咨询",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        
+        
+        ,{
+            "path" : "pages/question/questionList/questionList",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "有事必应",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/question/questionList/questionDetil",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "问题描述",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/detail/authHiTech/authHiTech",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "高企认定",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/detail/rewordHitech/rewordHitech",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "高企奖励",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/dataStatistics/dataStatistics",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "高企统计",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mine/myQuestion/myQuestion",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "问题咨询",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/question/replyQuestion/replyQuestion",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "问题回复",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/news/news",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "新闻动态",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		,{
+            "path" : "pages/news/newsDesc/newsDesc",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "新闻详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		,{
+		    "path" : "pages/detail/financing/financingInst/financingInst",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		        
+		}
+        ,{
+            "path" : "pages/finance/finance",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "投融资需求",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        
+        
+        ,{
+            "path" : "pages/financing/financing",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "企业投融资",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/finance/financingProduct",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "金融产品",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/finance/financingFirm",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "投融资审核",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		,{
+            "path" : "pages/detail/talentDemand/talentDemand",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "端口选择",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/detail/talentDemand/talentIndex/talentIndex",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "个人空间",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/detail/talentDemand/businessIndex/businessIndex",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "企业空间",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/detail/talentDemand/schoolIndex/schoolIndex",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "高校审批界面",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/detail/talentDemand/talentIndex/talentInside/talentInside",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "个人简介",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/detail/talentDemand/businessIndex/businessInside/businessInside",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "企业简介",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+		    "path" : "pages/detail/transform/transform",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "成果转化",
+		        "enablePullDownRefresh": false
+		    } 
+		}
+		,{
+		    "path" : "pages/detail/transform/manage/manage",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "成果管理",
+		        "enablePullDownRefresh": false
+		    } 
+		}
+		,{
+		    "path" : "pages/detail/transform/estimate/estimate",
+		    "style" :
+		    {
+		        "navigationBarTitleText": "成果评估",
+		        "enablePullDownRefresh": false
+		    }
+		}
+		,{
+		    "path" : "pages/detail/transform/demand/demand",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "技术需求",
+		        "enablePullDownRefresh": false
+		    } 
+		}
+		,{
+		    "path" : "pages/detail/transform/match/match",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "成果需求匹配",
+		        "enablePullDownRefresh": false
+		    } 
+		}
+		,{
+		    "path" : "pages/detail/transform/research/research",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "校企技术共研",
+		        "enablePullDownRefresh": false
+		    } 
+		}
+		,{
+		    "path" : "pages/detail/transform/process/process",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "产品研发进度",
+		        "enablePullDownRefresh": false
+		    } 
+		}
+		,{
+		    "path" : "pages/detail/transform/research/laboratory",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    } 
+		}
+		,{
+		    "path" : "pages/detail/transform/match/matchfail",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    } 
+		}
+		,{
+		    "path" : "pages/detail/transform/process/processDetail",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    } 
+		}
+		,{
+		    "path" : "pages/detail/transform/estimate/report",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    } 
+		}
+		,{
+		    "path" : "pages/detail/transform/manage/manageDetail",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    } 
+		}
+		,{
+		    "path" : "pages/detail/transform/estimate/submit",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    } 
+		}
+        ,{
+            "path" : "pages/finance/cridit inquiry",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "企业信用查询",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/finance/project inquiry",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "项目申请&查询",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+
+		,{
+		    "path" : "pages/detail/transform/demand/demandDetail",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    } 
+		},
+		{
+			"path": "pages/talent/businessinsidet",
+			"style": {
+				"navigationBarTitleText": "岗位详情"
+		
+			}
+		},
+		
+		{
+			"path": "pages/talent/publish_position",
+			"style": {
+				"navigationBarTitleText": "岗位发布"
+		
+			}
+		},
+		{
+		    "path" : "pages/talent/talentindext",
+		    "style" :
+		    {
+		        "navigationBarTitleText": "人才供需平台",
+		        "enablePullDownRefresh": false
+		    }
+		
+		},
+		{
+		        "path" : "pages/talent/talent_recommendation",
+		        "style" :
+		        {
+		            "navigationBarTitleText": "人才推荐",
+		            "enablePullDownRefresh": false
+		        }
+		
+		},
+		{
+		        "path" : "pages/talent/publish_position",
+		        "style" :
+		        {
+		            "navigationBarTitleText": "岗位发布",
+		            "enablePullDownRefresh": false
+		        }
+		
+		},
+		{
+		        "path" : "pages/talent/publish_talent",
+		        "style" :
+		        {
+		            "navigationBarTitleText": "简历发布",
+		            "enablePullDownRefresh": false
+		        }
+		
+		},
+		{
+		        "path" : "pages/talent/position_recommedation",
+		        "style" :
+		        {
+		            "navigationBarTitleText": "岗位推荐",
+		            "enablePullDownRefresh": false
+		        }
+		
+		},
+        {
+                "path" : "pages/talent/interview_notifications",
+                "style" :
+                {
+                    "navigationBarTitleText": "面试通知",
+                    "enablePullDownRefresh": false
+                }
+
+        },
+                {
+                "path" : "pages/talent/interview_management",
+                "style" :
+                {
+                    "navigationBarTitleText": "面试管理",
+                    "enablePullDownRefresh": false
+                }
+
+        },
+		{
+		        "path" : "pages/talent/resume_detail_for_company",
+		        "style" :
+		        {
+		            "navigationBarTitleText": "简历详情",
+		            "enablePullDownRefresh": false
+		        }
+
+		},
+		{
+		        "path" : "pages/talent/business_examine",
+		        "style" :
+		        {
+		            "navigationBarTitleText": "企业审核",
+		            "enablePullDownRefresh": false
+		        }
+		
+		},
+		{
+		        "path" : "pages/talent/talent_examine",
+		        "style" :
+		        {
+		            "navigationBarTitleText": "人才审核",
+		            "enablePullDownRefresh": false
+		        }
+		
+		},
+		{
+			"path": "pages/talent/talentinsidet",
+			"style": {
+				"navigationBarTitleText": "人才详情"
+		
+			}
+		},
+		{
+			"path": "pages/talent/interview_agree",
+			"style": {
+				"navigationBarTitleText": "人才详情"
+		
+			}
+		},
+		{
+			"path": "pages/talent/interview_application",
+			"style": {
+				"navigationBarTitleText": "企业详情"
+		
+			}
+		},
+		{
+			"path": "pages/talent/business_center",
+			"style": {
+				"navigationBarTitleText": "企业中心"
+		
+			}
+		},
+		{
+			"path": "pages/talent/school_center",
+			"style": {
+				"navigationBarTitleText": "高校审核中心"
+		
+			}
+		},
+		{
+			"path": "pages/talent/talent_center",
+			"style": {
+				"navigationBarTitleText": "人才中心"
+		
+			}
+		},
+		{
+			"path": "pages/talent/talent_visualization",
+			"style": {
+				"navigationBarTitleText": "人才数据"
+		
+			}
+		},
+		{
+			"path": "pages/talent/business_visualization",
+			"style": {
+				"navigationBarTitleText": "企业数据"
+		
+			}
+		}
+
+		,{
+		    "path" : "pages/detail/transform/techShow",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    } 
+		}
+		,{
+		    "path" : "pages/detail/transform/publish/publish",
+		    "style" :                                                                                    
+		    {
+		        "navigationStyle": "custom" ,// 隐藏系统导航栏
+		        "navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+		    } 
+		}
+		,{
+		    "path" : "pages/detail/transform/publish/myPublish",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "我的发布",
+		        "enablePullDownRefresh": false
+		    } 
+		},
+		{
+		    "path" : "pages/detail/transform/publish/submit",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    } 
+		}
+        ,{
+            "path" : "pages/detail/financing/successrongzi",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "成功融资",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/detail/financing/successtouzi",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "成功投资",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/finance/investProject",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "投资项目申请",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/finance/financingProject",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "融资项目申请",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/finance/investTable",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "填写投资项目申请",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/finance/financingTable",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "填写融资项目申请",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#1296db",
+		"backgroundColor": "#F8F8F8",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	},
+	"tabBar": {
+		"selectedColor": "#1296db",
+		"list": [{
+				"text": "首页",
+				"pagePath": "pages/index/index",
+				"iconPath": "static/font/home.png",
+				"selectedIconPath": "static/font/home-blue.png"
+			},
+			{
+				"text": "政策",
+				"pagePath": "pages/policy/policy",
+				"iconPath": "static/font/zhengce-blue.png",
+				"selectedIconPath": "static/font/zhengce.png"
+			},
+			// {
+			// 	"iconPath": "/static/font/add.png",
+			// 	"text": "发布",
+			// 	"midButton": true,
+			// 	"pagePath": "pages/add/add"
+			// },
+			{
+				"text": "园区",
+				"pagePath": "pages/park/park",
+				"iconPath": "static/font/park.png",
+				"selectedIconPath": "static/font/parkblue.png"
+			},
+			{
+				"text": "我的",
+				"pagePath": "pages/mine/mine",
+				"iconPath": "static/font/mine.png",
+				"selectedIconPath": "static/font/mineblue.png"
+			}
+		]
+
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+}

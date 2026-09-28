@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hnu.highlynewapp.transformation.mapper.TechAchMapper">
+    <!-- 嵌套结果：使用嵌套结果映射来处理重复的联合结果的子集 -->
+    <select id="findOneByTechAchId" parameterType="Long" resultMap="EvalReportWithTechAchResult1">
+        SELECT taer.`tech_ach_evaluation_report_id`, taer.`evaluation_status`, taer.`result`, taer.`maturity`,
+        taer.`level`, ta.* FROM
+        technology_achievement AS ta
+        LEFT JOIN tech_ach_evaluation_report AS taer
+        ON taer.`technology_achievement_id` = ta.`technology_achievement_id`
+        WHERE ta.`technology_achievement_id` = #{technologyAchievementId}
+        LIMIT 1
+    </select>
+    <resultMap id="EvalReportWithTechAchResult1" type="com.hnu.highlynewapp.transformation.vo.FindTechAchVo">
+        <id property="technologyAchievementId" column="technology_achievement_id"/>
+        <result property="title" column="title"/>
+        <result property="publishTime" column="publish_time"/>
+        <result property="category" column="category"/>
+        <result property="website" column="website"/>
+        <result property="description" column="description"/>
+        <result property="field" column="field"/>
+        <result property="image" column="image"/>
+        <result property="contactId" column="contact_id"/>
+        <result property="publisherType" column="publisher_type"/>
+        <result property="publisherId" column="publisher_id"/>
+        <result property="contactName" column="contact_name"/>
+        <result property="contactPhone" column="contact_phone"/>
+        <result property="contactEmail" column="contact_email"/>
+        <association property="techAchEvaluationReport"
+                     javaType="com.hnu.highlynewapp.transformation.pojo.TechAchEvaluationReport">
+            <id property="techAchEvaluationReportId" column="tech_ach_evaluation_report_id"/>
+            <result property="evaluationStatus" column="evaluation_status"/>
+            <result property="result" column="result"/>
+            <result property="maturity" column="maturity"/>
+            <result property="level" column="level"/>
+        </association>
+    </resultMap>
+
+    <resultMap id="EvalReportWithTechAchResult2" type="com.hnu.highlynewapp.transformation.vo.FindTechAchVo">
+        <id property="technologyAchievementId" column="technology_achievement_id"/>
+        <result property="title" column="title"/>
+        <result property="publishTime" column="publish_time"/>
+        <result property="category" column="category"/>
+        <result property="field" column="field"/>
+        <result property="image" column="image"/>
+        <association property="techAchEvaluationReport"
+                     javaType="com.hnu.highlynewapp.transformation.pojo.TechAchEvaluationReport">
+            <id property="techAchEvaluationReportId" column="tech_ach_evaluation_report_id"/>
+            <result property="maturity" column="maturity"/>
+            <result property="level" column="level"/>
+        </association>
+    </resultMap>
+
+    <select id="findAllPagesByPublisher" resultMap="EvalReportWithTechAchResult3">
+        SELECT taer.`tech_ach_evaluation_report_id`, taer.`publish_time`, taer.`complete_time`,
+        taer.`application_status`, taer.`evaluation_status`, ta.`technology_achievement_id` AS tech_ach_id, ta.`title`,
+        ta.`category`
+        FROM tech_ach_evaluation_report AS taer
+        INNER JOIN technology_achievement AS ta
+        ON taer.`technology_achievement_id` = ta.`technology_achievement_id`
+        <where>
+            <if test="publisherType != null and publisherId != null">
+                ta.`publisher_type` = #{publisherType} AND ta.`publisher_id` = #{publisherId}
+            </if>
+        </where>
+        ORDER BY taer.`publish_time` DESC
+    </select>
+    <resultMap id="EvalReportWithTechAchResult3"
+               type="com.hnu.highlynewapp.transformation.vo.FindTechAchVo">
+        <id property="technologyAchievementId" column="tech_ach_id"/>
+        <result property="title" column="title"/>
+        <result property="category" column="category"/>
+        <association property="techAchEvaluationReport"
+                     javaType="com.hnu.highlynewapp.transformation.pojo.TechAchEvaluationReport">
+            <id property="techAchEvaluationReportId" column="tech_ach_evaluation_report_id"/>
+            <result property="publishTime" column="publish_time"/>
+            <result property="completeTime" column="complete_time"/>
+            <result property="applicationStatus" column="application_status"/>
+            <result property="evaluationStatus" column="evaluation_status"/>
+        </association>
+    </resultMap>
+</mapper>

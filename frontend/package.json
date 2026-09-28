@@ -1,0 +1,21 @@
+{
+  "name": "yecheng-app-frontend",
+  "version": "1.0.0",
+  "description": "海南高企服务咨询平台 - uni-app H5 前端",
+  "main": "main.js",
+  "dependencies": {
+    "uview-ui": "^1.8.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "uni-app",
+    "vue",
+    "uview-ui",
+    "h5"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs"
+}

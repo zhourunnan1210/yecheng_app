@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hnu.highlynewapp.dao.BusinessInfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.hnu.highlynewapp.entity.BusinessInfoEntity" id="businessInfoMap">
+        <result property="businessId" column="business_id"/>
+        <result property="name" column="name"/>
+        <result property="corporate" column="corporate"/>
+        <result property="type" column="type"/>
+        <result property="manegeScope" column="manege_scope"/>
+        <result property="introduction" column="introduction"/>
+        <result property="foundDate" column="found_date"/>
+        <result property="manegeDeadline" column="manege_deadline"/>
+        <result property="website" column="website"/>
+        <result property="email" column="email"/>
+        <result property="capital" column="capital"/>
+        <result property="location" column="location"/>
+        <result property="address" column="address"/>
+        <result property="code" column="code"/>
+        <result property="telephone" column="telephone"/>
+        <result property="contactId" column="contact_id"/>
+        <result property="regOffice" column="reg_office"/>
+        <result property="examineDate" column="examine_date"/>
+        <result property="imageUrl" column="image_url"/>
+        <result property="examineImage" column="examine_image"/>
+        <result property="userId" column="user_id"/>
+        <result property="status" column="status"/>
+    </resultMap>
+
+
+</mapper>

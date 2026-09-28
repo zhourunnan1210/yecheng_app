@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hnu.highlynewapp.transformation.mapper.TechAchEvaluationReportMapper">
+    <!-- 嵌套结果：使用嵌套结果映射来处理重复的联合结果的子集 -->
+    <select id="findOneByTechAchId" parameterType="Long" resultMap="TechAchWithEvalReportResult">
+        SELECT taer.*, ta.`technology_achievement_id` AS tech_ach_id, ta.`title`, ta.`category` FROM
+        tech_ach_evaluation_report AS taer
+        INNER JOIN technology_achievement AS ta
+        ON taer.`technology_achievement_id` = ta.`technology_achievement_id`
+        WHERE taer.`technology_achievement_id` = #{technologyAchievementId}
+        LIMIT 1
+    </select>
+
+    <select id="findOneByTechAchEvalReportId" parameterType="Long" resultMap="TechAchWithEvalReportResult">
+        SELECT taer.*, ta.`technology_achievement_id` AS tech_ach_id, ta.`title`, ta.`category` FROM
+        tech_ach_evaluation_report AS taer
+        INNER JOIN technology_achievement AS ta
+        ON taer.`technology_achievement_id` = ta.`technology_achievement_id`
+        WHERE taer.`tech_ach_evaluation_report_id` = #{techAchEvaluationReportId}
+        LIMIT 1
+    </select>
+
+    <resultMap id="TechAchWithEvalReportResult"
+               type="com.hnu.highlynewapp.transformation.vo.FindTechAchEvaluationReportVo">
+        <id property="techAchEvaluationReportId" column="tech_ach_evaluation_report_id"/>
+        <result property="publishTime" column="publish_time"/>
+        <result property="completeTime" column="complete_time"/>
+        <result property="material" column="material"/>
+        <result property="applicationStatus" column="application_status"/>
+        <result property="failReason" column="fail_reason"/>
+        <result property="evaluationStatus" column="evaluation_status"/>
+        <result property="result" column="result"/>
+        <result property="maturity" column="maturity"/>
+        <result property="level" column="level"/>
+        <association property="technologyAchievementEntity"
+                     javaType="com.hnu.highlynewapp.entity.TechnologyAchievementEntity">
+            <id property="technologyAchievementId" column="tech_ach_id"/>
+            <result property="title" column="title"/>
+            <result property="category" column="category"/>
+        </association>
+    </resultMap>
+</mapper>

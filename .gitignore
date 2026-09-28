@@ -1,0 +1,84 @@
+# ==========================================
+# 椰城项目 .gitignore
+# ==========================================
+
+# --- 环境变量与密钥（最重要，切勿提交）---
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.crt
+# 示例模板要保留
+!.env.example
+
+# --- Java / Maven ---
+target/
+*.class
+*.jar
+*.war
+*.ear
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# --- 日志 ---
+*.log
+logs/
+worker_encode.log
+img_stegano.log
+
+# --- 运行时数据（上传的图片、水印产物）---
+cache/
+input_pictures/
+encoded_pictures/
+decoded_pictures/
+watermark/encoder/
+watermark/decoder/
+
+# --- 前端 / Node ---
+node_modules/
+unpackage/
+dist/
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+*.egg-info/
+.pytest_cache/
+
+# --- IDE ---
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.project
+.classpath
+.factorypath
+
+# --- 操作系统 ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- 本地证书目录（保留占位说明）---
+deploy/nginx/ssl/*.crt
+deploy/nginx/ssl/*.key
+deploy/nginx/ssl/*.pem

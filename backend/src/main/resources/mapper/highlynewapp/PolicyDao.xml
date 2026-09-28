@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hnu.highlynewapp.dao.PolicyDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.hnu.highlynewapp.entity.PolicyEntity" id="policyMap">
+        <result property="policyId" column="policy_id"/>
+        <result property="title" column="title"/>
+        <result property="publishTime" column="publish_time"/>
+        <result property="number" column="number"/>
+        <result property="category" column="category"/>
+        <result property="content" column="content"/>
+        <result property="link" column="link"/>
+        <result property="image" column="image"/>
+        <result property="addition" column="addition"/>
+    </resultMap>
+
+
+</mapper>
